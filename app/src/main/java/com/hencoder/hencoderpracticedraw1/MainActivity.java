@@ -1,5 +1,6 @@
 package com.hencoder.hencoderpracticedraw1;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.setTabTextColors(Color.GRAY, Color.RED);
         tabLayout.setupWithViewPager(pager);
     }
 
@@ -67,9 +69,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class PageModel {
-        @LayoutRes int sampleLayoutRes;
-        @StringRes int titleRes;
-        @LayoutRes int practiceLayoutRes;
+        @LayoutRes
+        int sampleLayoutRes;
+        @StringRes
+        int titleRes;
+        @LayoutRes
+        int practiceLayoutRes;
 
         PageModel(@LayoutRes int sampleLayoutRes, @StringRes int titleRes, @LayoutRes int practiceLayoutRes) {
             this.sampleLayoutRes = sampleLayoutRes;
